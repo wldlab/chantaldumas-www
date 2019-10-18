@@ -3,6 +3,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { hideVisually } from "polished"
 import { useIntl } from "react-intl"
+import { typography } from "../styles/styles"
 
 const ArtistCard = ({ name, description }) => (
   <div>
@@ -11,7 +12,7 @@ const ArtistCard = ({ name, description }) => (
     <div
       dangerouslySetInnerHTML={{ __html: description }}
       css={css`
-        font-size: ${35 / 25}em;
+        font-size: ${35 / typography.size.base}em;
         line-height: ${50 / 35};
       `}
     />
