@@ -25,7 +25,7 @@ const AlbumCard = ({ title, children, tracks }) => {
         <p
           css={css`
             font-family: ${typography.type.display};
-            font-size: ${120 / 25}em;
+            font-size: ${120 / typography.size.base}em;
             line-height: ${140 / 120};
             font-weight: ${typography.weight.medium};
             margin: 0;
@@ -37,7 +37,7 @@ const AlbumCard = ({ title, children, tracks }) => {
 
         <PlayButton
           css={css`
-            font-size: ${120 / 25}em;
+            font-size: ${120 / typography.size.base}em;
           `}
         />
       </div>

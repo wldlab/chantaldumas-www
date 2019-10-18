@@ -15,7 +15,9 @@ export const typography = {
     regular: 400,
     medium: 500,
   },
-  size: {},
+  size: {
+    base: 25,
+  },
 }
 
 // https://easings.net/en#
