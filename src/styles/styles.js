@@ -10,10 +10,10 @@ export const typography = {
   type: {
     primary: '"Beatrice Regular"',
     display: '"Beatrice Display"',
-    weight: {
-      regular: 400,
-      medium: 500,
-    },
-    size: {},
   },
+  weight: {
+    regular: 400,
+    medium: 500,
+  },
+  size: {},
 }
