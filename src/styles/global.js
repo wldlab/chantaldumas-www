@@ -14,7 +14,11 @@ export const bodyStyles = css`
 `
 
 export const htmlStyles = css`
-  background-color: ${color.white};
+  background: repeating-linear-gradient(
+    ${color.white},
+    ${color.primary} 3979px,
+    ${color.white} 7958px
+  );
 `
 
 export const h2 = css`
