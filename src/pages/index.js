@@ -3,11 +3,20 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import AlbumCard from "../components/AlbumCard/AlbumCard"
+import ArtistsView from "../views/ArtistsView"
+import { graphql } from "gatsby"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const artists = data.artists.edges.map(({ node }) => ({
+    name: node.frontmatter.title,
+    description: node.html,
+  }))
+
   return (
     <Layout>
       <SEO title="Home" />
+
+      <ArtistsView artists={artists} />
 
       <AlbumCard title="Le petit homme dans l’oreille">
         <p>
@@ -45,3 +54,20 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query accueilPageQuery {
+    artists: allMarkdownRemark(
+      filter: { frontmatter: { locale: { eq: "fr" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+          html
+        }
+      }
+    }
+  }
+`
