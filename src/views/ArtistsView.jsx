@@ -2,6 +2,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { hideVisually } from "polished"
+import { useIntl } from "react-intl"
 
 const ArtistCard = ({ name, description }) => (
   <div>
@@ -18,14 +19,16 @@ const ArtistCard = ({ name, description }) => (
 )
 
 const ArtistsView = ({ artists }) => {
+  const { formatMessage: t } = useIntl()
+
   return (
-    <section>
+    <section id={t({ id: "slug.notesOnTheArtists" })}>
       <h2
         css={css`
           ${hideVisually()}
         `}
       >
-        Notes sur les artistes
+        {t({ id: "labels.notesOnTheArtists" })}
       </h2>
 
       <div
@@ -35,8 +38,8 @@ const ArtistsView = ({ artists }) => {
           grid-gap: 30px;
         `}
       >
-        {artists.map(({ name, description }) => (
-          <ArtistCard name={name} description={description} />
+        {artists.map(({ name, description }, key) => (
+          <ArtistCard name={name} description={description} key={key} />
         ))}
       </div>
     </section>

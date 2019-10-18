@@ -1,4 +1,9 @@
 {
+  "slug.audioWorks": "audio-works",
+  "slug.notesOnTheArtists": "notes-on-the-artists",
+  "slug.openWindows": "open-windows",
+  "slug.nothingButWater": "nothing-but-water",
+  "slug.archivedWorks": "archived-works",
   "labels.audioWorks": "Audio works",
   "labels.notesOnTheArtists": "Notes on the artists",
   "labels.openWindows": "Open Windows",
