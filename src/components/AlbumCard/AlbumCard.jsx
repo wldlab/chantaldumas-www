@@ -11,7 +11,7 @@ const AlbumCard = ({ title, children, tracks }) => {
       css={css`
         display: grid;
         grid-gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         max-width: 1348px;
         margin: auto;
       `}
