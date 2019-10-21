@@ -4,16 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 import React from "react"
-import { IntlProvider, addLocaleData } from "react-intl"
-
-// locales data
-// import frLocaleData from "react-intl/locale-data/fr"
-// import enLocaleData from "react-intl/locale-data/en"
+import { IntlProvider } from "react-intl"
 
 import fr from "./src/locales/fr.json"
 import en from "./src/locales/en.json"
-
-// addLocaleData([...frLocaleData, ...enLocaleData])
 
 const messages = { fr, en }
 
