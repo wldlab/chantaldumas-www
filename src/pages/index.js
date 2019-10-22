@@ -3,21 +3,22 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import ArtistsView from "../views/ArtistsView"
-import { typography } from "../styles/styles"
 import { css } from "@emotion/core"
 import { graphql } from "gatsby"
-import styled from "@emotion/styled"
 import AlbumCard from "../components/AlbumCard"
 import Columns, { UnbreakableBlock } from "../components/Columns"
 import { forcingBreakingWord } from "../utils/forcing-breaking-word"
-
-const Wrapped = styled.div`
-  max-width: 1348px;
-  margin: auto;
-  font-size: ${45 / typography.size.base}em;
-`
+import {
+  OpenWindowWrapper,
+  SectionArtistName,
+  SectionTitle,
+} from "../views/indexPage.style"
+import { useIntl } from "react-intl"
+import StepWithBackgroundNumber from "../components/StepWithBackgroundNumber/StepWithBackgroundNumber"
 
 const IndexPage = ({ data }) => {
+  const { formatMessage: t } = useIntl()
+
   const artists = data.artists.edges.map(({ node }) => ({
     name: node.frontmatter.title,
     description: node.html,
@@ -27,28 +28,19 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
 
+      <section id={t({ id: "slug.audioWorks" })}></section>
+
       <ArtistsView artists={artists} />
 
-      <section>
-        <h2
-          css={css`
-            ${forcingBreakingWord}
-          `}
-        >
-          Open Windows
-        </h2>
+      <section id={t({ id: "slug.openWindows" })}>
+        <SectionTitle>Open Windows</SectionTitle>
 
-        <p
-          css={css`
-            font-size: ${68 / typography.size.base}em;
-            line-height: ${78 / 68};
-          `}
-        >
+        <SectionArtistName>
           Caroline <br />
           Gagné
-        </p>
+        </SectionArtistName>
 
-        <Wrapped>
+        <OpenWindowWrapper>
           <p>
             Published in two volumes, one in print and the other online, the
             publication Dialogues with Chantal Dumas invites readers and
@@ -61,7 +53,7 @@ const IndexPage = ({ data }) => {
             characteristics of radio art, and its position in the broader field
             of sound art.
           </p>
-        </Wrapped>
+        </OpenWindowWrapper>
 
         <Columns>
           <UnbreakableBlock>
@@ -109,7 +101,7 @@ const IndexPage = ({ data }) => {
           </UnbreakableBlock>
         </Columns>
 
-        <Wrapped>
+        <OpenWindowWrapper>
           <p>
             Volume 1: <i>Le son-refuge</i>
           </p>
@@ -123,7 +115,7 @@ const IndexPage = ({ data }) => {
             for the creation of a new work: Le son-refuge. We then invited other
             artists to get involved and become part of the dialogue.
           </p>
-        </Wrapped>
+        </OpenWindowWrapper>
 
         <Columns>
           <UnbreakableBlock>
@@ -160,7 +152,7 @@ const IndexPage = ({ data }) => {
           </UnbreakableBlock>
         </Columns>
 
-        <Wrapped>
+        <OpenWindowWrapper>
           <p>
             Volume 2: <i>Radio Art and Sound Art</i>
           </p>
@@ -179,41 +171,61 @@ const IndexPage = ({ data }) => {
             radio art. Are we still talking about radio? Would sound production
             be a more suitable term?”
           </p>
-        </Wrapped>
+        </OpenWindowWrapper>
 
         <Columns>
-          <p>
-            We asked six Canadian and European experts such questions about
-            various forms of “sound writing.” They rose to the challenge by
-            offering texts that examine Dumas’s work, focusing on certain
-            aspects that stand out, and broadening their analysis to consider
-            creation openly. These texts—several essays—are collected in the
-            publication’s second volume, titled Radio Art and Sound Art. Étienne
-            Noiseau presents an overview of Dumas’s major works. Mario Gauthier
-            reflects on radio by analyzing Le son-refuge. A text by Hélène
-            Prévost evokes the scope of the artist’s production and the context
-            in which her practice has evolved.
-          </p>
+          <UnbreakableBlock>
+            <p>
+              We asked six Canadian and European experts such questions about
+              various forms of “sound writing.” They rose to the challenge by
+              offering texts that examine Dumas’s work, focusing on certain
+              aspects that stand out, and broadening their analysis to consider
+              creation openly. These texts—several essays—are collected in the
+              publication’s second volume, titled Radio Art and Sound Art.
+              Étienne Noiseau presents an overview of Dumas’s major works. Mario
+              Gauthier reflects on radio by analyzing Le son-refuge. A text by
+              Hélène Prévost evokes the scope of the artist’s production and the
+              context in which her practice has evolved.
+            </p>
+          </UnbreakableBlock>
 
-          <p>
-            A testimonial by Frédéric Dallaire addresses the notion of
-            perception while implicitly looking at the question of
-            collaboration. By analyzing the work Tanz, Serge Cardinal considers
-            sound as material, as that which gives form and creates movement and
-            space. Lastly, Golo Föllmer has written a text based on a recent
-            interview conducted with the artist that examines the role of
-            installation, sound, and interactivity in her practice.
-          </p>
+          <UnbreakableBlock>
+            <p>
+              A testimonial by Frédéric Dallaire addresses the notion of
+              perception while implicitly looking at the question of
+              collaboration. By analyzing the work Tanz, Serge Cardinal
+              considers sound as material, as that which gives form and creates
+              movement and space. Lastly, Golo Föllmer has written a text based
+              on a recent interview conducted with the artist that examines the
+              role of installation, sound, and interactivity in her practice.
+            </p>
+          </UnbreakableBlock>
         </Columns>
 
-        <Wrapped>
+        <OpenWindowWrapper>
           <p>
             In essence, <i>Dialogues with Chantal Dumas</i> is a complex work in
             which, for Chantal Dumas, sound is a fully fledged artistic language
             that has the potential to redefine reality.
           </p>
-        </Wrapped>
+        </OpenWindowWrapper>
       </section>
+
+      <section id={t({ id: "slug.nothingButWater" })}>
+        <SectionTitle>
+          Nothing <br />
+          but water
+        </SectionTitle>
+
+        <SectionArtistName>
+          Céline <br />
+          Huyghebaert
+        </SectionArtistName>
+
+        <StepWithBackgroundNumber id="1"></StepWithBackgroundNumber>
+      </section>
+
+      <section id={t({ id: "slug.archivedWorks" })}></section>
 
       <AlbumCard title="Le petit homme dans l’oreille">
         <p>
