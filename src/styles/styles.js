@@ -4,7 +4,13 @@ export const color = {
   black: "#000",
 }
 
-export const spacing = {}
+export const spacing = {
+  margin: [36, 147],
+  gap: [10, 30],
+  column: [68, 108],
+  breakpoints: [0, 1024],
+  width: [303, 1624],
+}
 
 export const typography = {
   type: {
@@ -17,7 +23,14 @@ export const typography = {
   },
   size: {
     base: 25,
+    bases: [14, 25],
+    h2: [68, 250],
+    h3: [30, 68],
+    m: [18, 35],
+    l: [23, 45],
+    xxl: [45, 120],
   },
+  breakpoints: [0, 1024],
 }
 
 // https://easings.net/en#

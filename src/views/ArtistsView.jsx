@@ -20,8 +20,14 @@ const ArtistCard = ({ name, description }) => (
     <div
       dangerouslySetInnerHTML={{ __html: description }}
       css={css`
-        font-size: ${35 / typography.size.base}em;
+        /* font-size: ${35 / typography.size.base}em; */
         line-height: ${50 / 35};
+
+        font-size: ${typography.size.m[0] / typography.size.bases[0]}em;
+
+        ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+          font-size: ${typography.size.m[1] / typography.size.bases[1]}em;
+        }
       `}
     />
   </div>

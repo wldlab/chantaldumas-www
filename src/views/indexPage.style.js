@@ -2,22 +2,25 @@ import { typography } from "../styles/styles"
 import styled from "@emotion/styled"
 import { paddedStyled } from "../components/Padded"
 import { forcingBreakingWord } from "../utils/forcing-breaking-word"
+import { h3 } from "../styles/global"
+import mediaQuery from "../utils/media-query"
 
 export const OpenWindowWrapper = styled.div`
   ${paddedStyled}
-  max-width: 1348px;
-  margin: auto;
-  font-size: ${45 / typography.size.base}em;
+
+  font-size: ${typography.size.l[0] / typography.size.bases[0]}em;
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.l[1] / typography.size.bases[1]}em;
+  }
 `
 
 export const OpenWindowName = styled.p`
-  font-size: ${68 / typography.size.base}em;
-  line-height: ${78 / 68};
+  ${h3};
 `
 
 export const SectionArtistName = styled.p`
-  font-size: ${68 / typography.size.base}em;
-  line-height: ${78 / 68};
+  ${h3};
 `
 
 export const SectionTitle = styled.h2`

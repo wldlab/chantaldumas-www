@@ -4,7 +4,7 @@ import mediaQuery from "../utils/media-query"
 
 export const bodyStyles = css`
   font-family: ${typography.type.primary};
-  font-size: 18px;
+  font-size: 14px;
   color: ${color.black};
   line-height: ${30 / typography.size.base};
 
@@ -21,16 +21,37 @@ export const htmlStyles = css`
   );
 `
 
+// const fontsBreakpoint = sizes => {
+//   return css`
+//     ${typography.breakpoints.map((breakpoint, index) => {
+//       return `
+//         ${mediaQuery.greaterThen(breakpoint)} {
+//           font-size: ${sizes[index] / typography.size.base[index]}em;
+//         }
+//       `
+//     })}
+//   `
+// }
+
 export const h2 = css`
-  font-size: ${250 / typography.size.base}em;
   font-family: ${typography.type.display};
   font-weight: ${typography.weight.medium};
   line-height: 1;
+  font-size: ${typography.size.h2[0] / typography.size.bases[0]}em;
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.h2[1] / typography.size.bases[1]}em;
+  }
 `
 
 export const h3 = css`
-  font-size: ${65 / typography.size.base}em;
   font-weight: ${typography.weight.regular};
+  font-size: ${typography.size.h3[0] / typography.size.bases[0]}em;
+  line-height: ${78 / 68};
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.h3[1] / typography.size.bases[1]}em;
+  }
 `
 
 export const globalStyle = css`
