@@ -7,7 +7,7 @@ export const paddedStyled = css`
   margin: auto;
 `
 
-const padded = ({ children, ...rest }) => {
+const Padded = ({ children, ...rest }) => {
   return (
     <div
       css={css`
@@ -20,4 +20,4 @@ const padded = ({ children, ...rest }) => {
   )
 }
 
-export default padded
+export default Padded

@@ -1,5 +1,5 @@
-import padded, { paddedStyled } from "./padded"
+import Padded, { paddedStyled } from "./Padded"
 
-export default padded
+export default Padded
 
 export { paddedStyled }
