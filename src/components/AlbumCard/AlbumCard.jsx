@@ -1,21 +1,21 @@
 // vendors
 import React from "react"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 import PlayButton from "../PlayButton/PlayButton"
 import { typography } from "../../styles/styles"
 import { forcingBreakingWord } from "../../utils/forcing-breaking-word"
+import Padded from "../Padded"
+
+const StyledWrapper = styled(Padded)`
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`
 
 const AlbumCard = ({ title, children, tracks }) => {
   return (
-    <div
-      css={css`
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        max-width: 1348px;
-        margin: auto;
-      `}
-    >
+    <StyledWrapper padded>
       <div
         css={css`
           display: flex;
@@ -43,7 +43,7 @@ const AlbumCard = ({ title, children, tracks }) => {
       </div>
 
       <div>{children}</div>
-    </div>
+    </StyledWrapper>
   )
 }
 
