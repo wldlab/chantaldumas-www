@@ -3,11 +3,9 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import ArtistsView from "../views/ArtistsView"
-import { css } from "@emotion/core"
 import { graphql } from "gatsby"
 import AlbumCard from "../components/AlbumCard"
 import Columns, { UnbreakableBlock } from "../components/Columns"
-import { forcingBreakingWord } from "../utils/forcing-breaking-word"
 import {
   OpenWindowWrapper,
   SectionArtistName,
@@ -15,14 +13,31 @@ import {
 } from "../views/indexPage.style"
 import { useIntl } from "react-intl"
 import StepWithBackgroundNumber from "../components/StepWithBackgroundNumber/StepWithBackgroundNumber"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const IndexPage = ({ data }) => {
   const { formatMessage: t } = useIntl()
 
-  const artists = data.artists.edges.map(({ node }) => ({
-    name: node.frontmatter.title,
-    description: node.html,
-  }))
+  const artists = data.artists.edges
+    .filter(
+      ({
+        node: {
+          childMdx: {
+            frontmatter: { locale },
+          },
+        },
+      }) => locale === "en"
+    )
+    .map(({ node }) => ({
+      name: node.childMdx.frontmatter.title,
+      description: node.childMdx.body,
+    }))
+
+  const nothingButWaterChapters = data.nothingButWaterChapters.edges.map(
+    ({ node }) => node
+  )
+
+  console.log(nothingButWaterChapters)
 
   return (
     <Layout>
@@ -222,42 +237,48 @@ const IndexPage = ({ data }) => {
           Huyghebaert
         </SectionArtistName>
 
-        <StepWithBackgroundNumber id="1"></StepWithBackgroundNumber>
+        {nothingButWaterChapters.map(({ childMdx: { body } }, index) => (
+          <StepWithBackgroundNumber id={index + 1}>
+            <MDXRenderer>{body}</MDXRenderer>
+          </StepWithBackgroundNumber>
+        ))}
       </section>
 
-      <section id={t({ id: "slug.archivedWorks" })}></section>
-
-      <AlbumCard title="Le petit homme dans l’oreille">
-        <p>
-          Le petit homme dans l’oreille (2000)
-          <br />
-          Œuvre sonore de Christian Calon et Chantal Dumas
-          <br />
-          Durée : 57 min
-        </p>
-        <p>
-          Été.
-          <br />9 juillet–9 septembre 1999.
-          <br />
-          20 000 km sur les routes et les pistes du Canada. Montée de Montréal
-          au cercle arctique (Yukon) à travers les Prairies, descente vers le
-          Pacifique et retour par les Badlands. Remplie d’équipements de prise
-          de son, d’outils, de cassettes DAT, tente, Coleman, sacs de couchage,
-          ustensiles de cuisine, pneu de secours, bières, appareil photo,
-          bottes, livres et cartes routières, la minivan Mercury prit la route.
-        </p>
-        <p>
-          Commandée par Mario Gauthier pour l’émission L’espace du son, cette
-          œuvre a été produite par la Chaîne culturelle de Radio-Canada
-          (Montréal, Canada). L’accompagnement de Rob Dramer, de Lillian Ireland
-          et de Mike Krutko a également permis la réalisation de ce parcours
-          sonore, tout comme les maintes voix anonymes qui l’ont inspiré.
-        </p>
-        <p>
-          Le petit homme dans l’oreille a été enregistrée sur CD et publiée dans
-          le coffret de deux disques radio roadmovies.
-        </p>
-      </AlbumCard>
+      <section id={t({ id: "slug.archivedWorks" })}>
+        <AlbumCard title="Le petit homme dans l’oreille">
+          <p>
+            Le petit homme dans l’oreille (2000)
+            <br />
+            Œuvre sonore de Christian Calon et Chantal Dumas
+            <br />
+            Durée : 57 min
+          </p>
+          <p>
+            Été.
+            <br />9 juillet–9 septembre 1999.
+            <br />
+            20 000 km sur les routes et les pistes du Canada. Montée de Montréal
+            au cercle arctique (Yukon) à travers les Prairies, descente vers le
+            Pacifique et retour par les Badlands. Remplie d’équipements de prise
+            de son, d’outils, de cassettes DAT, tente, Coleman, sacs de
+            couchage, ustensiles de cuisine, pneu de secours, bières, appareil
+            photo, bottes, livres et cartes routières, la minivan Mercury prit
+            la route.
+          </p>
+          <p>
+            Commandée par Mario Gauthier pour l’émission L’espace du son, cette
+            œuvre a été produite par la Chaîne culturelle de Radio-Canada
+            (Montréal, Canada). L’accompagnement de Rob Dramer, de Lillian
+            Ireland et de Mike Krutko a également permis la réalisation de ce
+            parcours sonore, tout comme les maintes voix anonymes qui l’ont
+            inspiré.
+          </p>
+          <p>
+            Le petit homme dans l’oreille a été enregistrée sur CD et publiée
+            dans le coffret de deux disques radio roadmovies.
+          </p>
+        </AlbumCard>
+      </section>
     </Layout>
   )
 }
@@ -266,15 +287,29 @@ export default IndexPage
 
 export const query = graphql`
   query accueilPageQuery {
-    artists: allMarkdownRemark(
-      filter: { frontmatter: { locale: { eq: "fr" } } }
+    artists: allFile(filter: { sourceInstanceName: { eq: "artist" } }) {
+      edges {
+        node {
+          childMdx {
+            frontmatter {
+              title
+              locale
+            }
+            body
+          }
+        }
+      }
+    }
+
+    nothingButWaterChapters: allFile(
+      filter: { sourceInstanceName: { eq: "nothingButWater" } }
+      sort: { fields: name, order: ASC }
     ) {
       edges {
         node {
-          frontmatter {
-            title
+          childMdx {
+            body
           }
-          html
         }
       }
     }

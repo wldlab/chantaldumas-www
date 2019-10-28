@@ -6,6 +6,7 @@ import { useIntl } from "react-intl"
 import { typography } from "../styles/styles"
 import { forcingBreakingWord } from "../utils/forcing-breaking-word"
 import mediaQuery from "../utils/media-query"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const ArtistCard = ({ name, description }) => (
   <div>
@@ -17,8 +18,7 @@ const ArtistCard = ({ name, description }) => (
       {name}
     </h3>
 
-    <div
-      dangerouslySetInnerHTML={{ __html: description }}
+    <MDXRenderer
       css={css`
         /* font-size: ${35 / typography.size.base}em; */
         line-height: ${50 / 35};
@@ -29,7 +29,9 @@ const ArtistCard = ({ name, description }) => (
           font-size: ${typography.size.m[1] / typography.size.bases[1]}em;
         }
       `}
-    />
+    >
+      {description}
+    </MDXRenderer>
   </div>
 )
 

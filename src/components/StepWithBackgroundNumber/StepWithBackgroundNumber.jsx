@@ -8,6 +8,8 @@ const StepWithBackgroundNumber = ({ children, id, ...rest }) => (
     css={css`
       position: relative;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
     `}
   >
     <div
@@ -38,7 +40,13 @@ const StepWithBackgroundNumber = ({ children, id, ...rest }) => (
       </div>
     </div>
 
-    <div>{children}</div>
+    <div
+      css={css`
+        width: 100%;
+      `}
+    >
+      {children}
+    </div>
   </div>
 )
 

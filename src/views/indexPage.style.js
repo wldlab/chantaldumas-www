@@ -26,3 +26,19 @@ export const SectionArtistName = styled.p`
 export const SectionTitle = styled.h2`
   ${forcingBreakingWord};
 `
+
+export const NothingButWaterFontBig = styled.div`
+  font-size: ${typography.size.h3[0] / typography.size.bases[0]}em;
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.h3[1] / typography.size.bases[1]}em;
+  }
+`
+
+export const NothingButWaterFontMedium = styled.div`
+  font-size: ${typography.size.l[0] / typography.size.bases[0]}em;
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.l[1] / typography.size.bases[1]}em;
+  }
+`

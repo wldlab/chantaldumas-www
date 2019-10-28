@@ -17,12 +17,27 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data`,
+        name: `artist`,
+        path: `${__dirname}/src/data/artists`,
       },
     },
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `nothingButWater`,
+        path: `${__dirname}/src/data/nothingButWater`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [],
+        plugins: [],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
