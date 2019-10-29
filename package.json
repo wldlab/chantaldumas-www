@@ -26,7 +26,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "react-intl": "^3.3.2"
+    "react-intl": "^3.3.2",
+    "slug": "^1.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.4.0",

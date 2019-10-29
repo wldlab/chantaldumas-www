@@ -21,8 +21,13 @@ module.exports = {
         path: `${__dirname}/src/data/artists`,
       },
     },
-    // `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `archives`,
+        path: `${__dirname}/src/data/archives`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,6 +35,7 @@ module.exports = {
         path: `${__dirname}/src/data/nothingButWater`,
       },
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

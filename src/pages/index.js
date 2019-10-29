@@ -1,9 +1,13 @@
 import React from "react"
+import slug from "slug"
+import { css } from "@emotion/core"
+import { graphql } from "gatsby"
+import { useIntl } from "react-intl"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import ArtistsView from "../views/ArtistsView"
-import { graphql } from "gatsby"
 import AlbumCard from "../components/AlbumCard"
 import Columns, { UnbreakableBlock } from "../components/Columns"
 import {
@@ -11,9 +15,17 @@ import {
   SectionArtistName,
   SectionTitle,
 } from "../views/indexPage.style"
-import { useIntl } from "react-intl"
 import StepWithBackgroundNumber from "../components/StepWithBackgroundNumber/StepWithBackgroundNumber"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { typography } from "../styles/styles"
+import Padded from "../components/Padded"
+
+const getMdxFile = array => {
+  return array.map(({ node }) => node).find(({ childMdx }) => childMdx)
+}
+
+const getAudioFiles = array => {
+  return array.map(({ node }) => node).filter(({ childMdx }) => !childMdx)
+}
 
 const IndexPage = ({ data }) => {
   const { formatMessage: t } = useIntl()
@@ -37,7 +49,7 @@ const IndexPage = ({ data }) => {
     ({ node }) => node
   )
 
-  console.log(nothingButWaterChapters)
+  const archives = data.archives.group || []
 
   return (
     <Layout>
@@ -244,40 +256,148 @@ const IndexPage = ({ data }) => {
         ))}
       </section>
 
+      <picture
+        css={css`
+          display: block;
+          margin: ${200 / typography.size.base}rem calc(50% - 50vw);
+        `}
+      >
+        <source
+          sizes="100vw"
+          srcset={data.imgSpacerArchive.img.fluid.srcSetWebp}
+          type="image/webp"
+        />
+
+        <img
+          src={data.imgSpacerArchive.img.fluid.src}
+          alt=""
+          sizes="100vw"
+          srcset={data.imgSpacerArchive.img.fluid.srcSet}
+        />
+      </picture>
+
       <section id={t({ id: "slug.archivedWorks" })}>
-        <AlbumCard title="Le petit homme dans l’oreille">
-          <p>
-            Le petit homme dans l’oreille (2000)
-            <br />
-            Œuvre sonore de Christian Calon et Chantal Dumas
-            <br />
-            Durée : 57 min
-          </p>
-          <p>
-            Été.
-            <br />9 juillet–9 septembre 1999.
-            <br />
-            20 000 km sur les routes et les pistes du Canada. Montée de Montréal
-            au cercle arctique (Yukon) à travers les Prairies, descente vers le
-            Pacifique et retour par les Badlands. Remplie d’équipements de prise
-            de son, d’outils, de cassettes DAT, tente, Coleman, sacs de
-            couchage, ustensiles de cuisine, pneu de secours, bières, appareil
-            photo, bottes, livres et cartes routières, la minivan Mercury prit
-            la route.
-          </p>
-          <p>
-            Commandée par Mario Gauthier pour l’émission L’espace du son, cette
-            œuvre a été produite par la Chaîne culturelle de Radio-Canada
-            (Montréal, Canada). L’accompagnement de Rob Dramer, de Lillian
-            Ireland et de Mike Krutko a également permis la réalisation de ce
-            parcours sonore, tout comme les maintes voix anonymes qui l’ont
-            inspiré.
-          </p>
-          <p>
-            Le petit homme dans l’oreille a été enregistrée sur CD et publiée
-            dans le coffret de deux disques radio roadmovies.
-          </p>
-        </AlbumCard>
+        <Padded>
+          <Columns
+            css={css`
+              min-height: 75vh;
+            `}
+          >
+            <UnbreakableBlock>
+              <p>
+                This text contains references to the following works or
+                documents listed in order of appearance:
+              </p>
+            </UnbreakableBlock>
+
+            <UnbreakableBlock>
+              <Columns
+                css={css`
+                  font-size: ${typography.size.s[1] /
+                    typography.size.bases[1]}em;
+                  line-height: ${20 / 15};
+                `}
+              >
+                <UnbreakableBlock>
+                  <p>
+                    Véronique Sanson, <br />
+                    “Rien que de l’eau,” 1992.
+                  </p>
+
+                  <p>
+                    Dictionary of the Centre National de Ressources Textuelles
+                    et Lexicales.
+                  </p>
+
+                  <p>Carole Rieussec, JOKER, 2019.</p>
+
+                  <p>
+                    Mathieu Simonet, <br />
+                    Anne-Sarah K., 2019.
+                  </p>
+
+                  <p>
+                    Stephen King, <br />
+                    The Langoliers, 1990.
+                  </p>
+
+                  <p>
+                    Chantal Dumas, <br />
+                    Le son-refuge, 2019.
+                  </p>
+
+                  <p>
+                    Wolfgang Amadeus Mozart, Piano Sonata No. 18 in D major,
+                    1789.
+                  </p>
+
+                  <p>
+                    Georges Perec, <br />
+                    L’Infra-ordinaire, 1989.
+                  </p>
+
+                  <p>
+                    Marielle Macé, <br />
+                    Sidérer, considérer – <br />
+                    Migrants en France, 2017.
+                  </p>
+                </UnbreakableBlock>
+
+                <UnbreakableBlock>
+                  <p>
+                    Emmanuel Perrin, <br />
+                    “Le ‘Bloop,’ un mystérieux son venu de l’océan qui a
+                    longtemps intrigué les chercheurs,” 2015.
+                  </p>
+                  <p>Erin Sexton, Expedition, 2019.</p>
+                  <p>
+                    Philippe Baudouin, <br />
+                    “Les voix fantomatiques de Philippe Baudouin,” 2018.
+                  </p>
+                  <p>Wikipedia.</p>
+                  <p>
+                    Ryōko Sekiguchi, <br />
+                    La Voix sombre, 2015.
+                  </p>
+                  <p>
+                    Anna Friz, <br />
+                    Imperfect Breath, 2019.
+                  </p>
+                  <p>
+                    Giorgio Agamben, <br />
+                    Nudities, 2010.
+                  </p>
+                  <p>
+                    Musée d’art contemporain de Montréal, Leonard Cohen, A Crack
+                    in Everything, 2017–2018.
+                  </p>
+                </UnbreakableBlock>
+              </Columns>
+            </UnbreakableBlock>
+          </Columns>
+        </Padded>
+
+        {archives.map(({ edges }) => {
+          const mdx = getMdxFile(edges)
+          const audioFiles = getAudioFiles(edges)
+
+          const tracks = audioFiles.map(file => [
+            {
+              src: file.publicURL,
+              type: file.internal.mediaType,
+            },
+          ])
+
+          return (
+            <AlbumCard
+              title={mdx.childMdx.frontmatter.title}
+              slug={slug(mdx.childMdx.frontmatter.title)}
+              tracks={tracks}
+            >
+              <MDXRenderer>{mdx.childMdx.body}</MDXRenderer>
+            </AlbumCard>
+          )
+        })}
       </section>
     </Layout>
   )
@@ -309,6 +429,39 @@ export const query = graphql`
         node {
           childMdx {
             body
+          }
+        }
+      }
+    }
+
+    imgSpacerArchive: file(
+      sourceInstanceName: { eq: "images" }
+      name: { eq: "img-spacer-archive" }
+    ) {
+      img: childImageSharp {
+        fluid(maxWidth: 2560) {
+          srcSetWebp
+          srcSet
+          src
+        }
+      }
+    }
+
+    archives: allFile(filter: { sourceInstanceName: { eq: "archives" } }) {
+      group(field: relativeDirectory) {
+        edges {
+          node {
+            internal {
+              mediaType
+            }
+            childMdx {
+              body
+              frontmatter {
+                title
+                locale
+              }
+            }
+            publicURL
           }
         }
       }
