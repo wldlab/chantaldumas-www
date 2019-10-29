@@ -109,13 +109,15 @@ const AlbumCard = ({ title, children, slug, tracks }) => {
             flex-basis: 100%;
           `}
         >
-          <PlayButton
-            onClick={handlePlayClick}
-            isPlaying={isPlaying}
-            css={css`
-              font-size: ${120 / typography.size.base}em;
-            `}
-          />
+          {tracks.length > 0 && (
+            <PlayButton
+              onClick={handlePlayClick}
+              isPlaying={isPlaying}
+              css={css`
+                font-size: ${120 / typography.size.base}em;
+              `}
+            />
+          )}
         </div>
 
         <div
