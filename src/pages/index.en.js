@@ -19,15 +19,17 @@ import StepWithBackgroundNumber from "../components/StepWithBackgroundNumber/Ste
 import { typography } from "../styles/styles"
 import Padded from "../components/Padded"
 
-const getMdxFile = array => {
-  return array.map(({ node }) => node).find(({ childMdx }) => childMdx)
+const getMdxFile = (array, lang) => {
+  return array.find(({ node }) => {
+    return node.childMdx && node.childMdx.frontmatter.locale === lang
+  }).node
 }
 
 const getAudioFiles = array => {
   return array.map(({ node }) => node).filter(({ childMdx }) => !childMdx)
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
   const { formatMessage: t } = useIntl()
 
   const artists = data.artists.edges
@@ -38,7 +40,7 @@ const IndexPage = ({ data }) => {
             frontmatter: { locale },
           },
         },
-      }) => locale === "en"
+      }) => locale === langKey
     )
     .map(({ node }) => ({
       name: node.childMdx.frontmatter.title,
@@ -378,7 +380,7 @@ const IndexPage = ({ data }) => {
         </Padded>
 
         {archives.map(({ edges }) => {
-          const mdx = getMdxFile(edges)
+          const mdx = getMdxFile(edges, langKey)
           const audioFiles = getAudioFiles(edges)
 
           const tracks = audioFiles.map(file => [
@@ -406,7 +408,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query accueilPageQuery {
+  query homePageQuery {
     artists: allFile(filter: { sourceInstanceName: { eq: "artist" } }) {
       edges {
         node {
