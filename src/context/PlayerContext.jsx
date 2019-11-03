@@ -45,7 +45,7 @@ export class PlayerProvider extends Component {
     const { playStatus } = this.state
 
     // prevent to start back after paused
-    if (playStatus === "LOADING") {
+    if (playStatus === "PLAYING") {
       this.setState({
         seeking: false,
       })
