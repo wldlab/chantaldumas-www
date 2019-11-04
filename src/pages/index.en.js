@@ -19,6 +19,10 @@ import {
 import StepWithBackgroundNumber from "../components/StepWithBackgroundNumber/StepWithBackgroundNumber"
 import { typography } from "../styles/styles"
 import Padded from "../components/Padded"
+import mediaQuery from "../utils/media-query"
+
+import logoAvatar from "../images/logo-avatar.svg"
+import logoCALQ from "../images/logo-calq.svg"
 
 const getMdxFile = (array, lang) => {
   return array.find(({ node }) => {
@@ -422,6 +426,206 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           )
         })}
       </section>
+
+      <footer
+        css={css`
+          display: grid;
+
+          grid-gap: 30px;
+          grid-template-columns: repeat(1, 1fr);
+          margin: 100px auto;
+
+          ${mediaQuery.greaterThen(1280)} {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          a {
+            color: inherit;
+            text-decoration: inherit;
+          }
+        `}
+      >
+        <div
+          css={css`
+            grid-column: 1 / span 1;
+          `}
+        >
+          <p>Dialogues with Chantal&nbsp;Dumas</p>
+
+          <p>
+            Volume 1: <br />
+            Le son-refuge
+          </p>
+
+          <p>This publication was produced with the participation of:</p>
+        </div>
+
+        <ul
+          css={css`
+            grid-column: span 2;
+            column-width: 260px;
+            column-count: 2;
+            column-gap: 30px;
+            ul,
+            & {
+              list-style: none;
+              padding: 0;
+            }
+
+            > li {
+              break-inside: avoid; /* Chrome, Safari */
+              page-break-inside: avoid; /* Theoretically FF 20+ */
+              display: table; /* Actually FF 20+ */
+              margin: 0 0 1em;
+            }
+          `}
+        >
+          <li>
+            Publication editor:
+            <ul>
+              <li>Caroline Gagné</li>
+            </ul>
+          </li>
+
+          <li>
+            Authors:
+            <ul>
+              <li>Caroline Gagné</li>
+              <li>Céline Huyghebaert</li>
+            </ul>
+          </li>
+
+          <li>
+            English translation of the original French texts:
+            <ul>
+              <li>Oana Avasilichioaei</li>
+            </ul>
+          </li>
+
+          <li>
+            Copy editing of French texts:
+            <ul>
+              <li>Valérie Litalien</li>
+            </ul>
+          </li>
+
+          <li>
+            Proofreading:
+            <ul>
+              <li>Judy Queen</li>
+              <li>Valérie Litalien</li>
+            </ul>
+          </li>
+
+          <li>
+            Artists:
+            <ul>
+              <li>Chantal Dumas</li>
+              <li>Anna Friz</li>
+              <li>Carole Rieussec</li>
+              <li>Erin Sexton</li>
+            </ul>
+          </li>
+
+          <li>
+            Digital mastering:
+            <ul>
+              <li>Thierry Gauthier</li>
+            </ul>
+          </li>
+
+          <li>
+            Graphic design:
+            <ul>
+              <li>
+                <a href="http://criteriumdesign.com/">Criterium</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Web programming and content integration:
+            <ul>
+              <li>
+                <a href="http://criteriumdesign.com/">Criterium</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div
+          css={css`
+            max-width: 246px;
+            font-size: ${typography.size.s[0] / typography.size.bases[0]}em;
+
+            ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+              font-size: ${typography.size.s[1] / typography.size.bases[1]}em;
+            }
+          `}
+        >
+          <p>
+            Publishing and distribution: <br />
+            Avatar, association de création et de diffusion sonores et
+            électroniques
+            <br />
+            541, rue De Saint-Vallier Est, bureau 562, Québec <br />
+            (Québec) G1K 3P9
+            <br />
+            418 522-8918
+            <br />
+            <a href="https://avatarquebec.org">avatarquebec.org</a>
+          </p>
+
+          <p>
+            Legal deposit:
+            <br />
+            Bibliothèque et Archives nationales du Québec, 2019
+            <br />
+            Bibliothèque et Archives Canada, 2019
+            <br />
+            ISBN 978-2-920512-26-9 <br />
+            (édition imprimée)
+            <br />
+            ISBN 978-2-920512-25-2 <br />
+            (microsite)
+          </p>
+
+          <p>
+            © Avatar, the artists, <br />
+            the authors, 2019
+          </p>
+
+          <p>
+            All rights reserved – <br />
+            Printed in Canada
+          </p>
+
+          <div
+            css={css`
+              display: flex;
+              align-items: center;
+              margin: 50px 0;
+              text-align: center;
+            `}
+          >
+            <a href="https://avatarquebec.org/">
+              <img src={logoAvatar} alt="" />
+            </a>
+
+            <a
+              href="https://www.calq.gouv.qc.ca/"
+              css={css`
+                flex-grow: 2;
+                * {
+                  margin: auto;
+                }
+              `}
+            >
+              <img src={logoCALQ} alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </Layout>
   )
 }
