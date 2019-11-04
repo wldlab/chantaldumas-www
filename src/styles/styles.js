@@ -24,6 +24,7 @@ export const typography = {
   size: {
     base: 25,
     bases: [14, 25],
+    h1: [47, 98],
     h2: [68, 250],
     h3: [30, 68],
     s: [15, 15],

@@ -23,6 +23,9 @@ import mediaQuery from "../utils/media-query"
 
 import logoAvatar from "../images/logo-avatar.svg"
 import logoCALQ from "../images/logo-calq.svg"
+import Hero from "../views/Hero"
+import { hideVisually } from "polished"
+import AudioWorkPart from "../views/AudioWorkPart"
 
 const getMdxFile = (array, lang) => {
   return array.find(({ node }) => {
@@ -62,7 +65,81 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
     <Layout>
       <SEO title="Home" />
 
-      <section id={t({ id: "slug.audioWorks" })}></section>
+      <section
+        id={t({ id: "slug.audioWorks" })}
+        css={css`
+          margin-bottom: 175px;
+        `}
+      >
+        <h2
+          css={css`
+            ${hideVisually()}
+          `}
+        >
+          Audio Works
+        </h2>
+
+        <div>
+          <AudioWorkPart
+            title="Le son-refuge"
+            slug="Leson-refuge-dumas"
+            tracks={[]}
+            duration="20 min 48 sec"
+            artist="Dumas"
+            year="2018"
+          >
+            <p>
+              Two series of interviews were conducted in two cities, two years
+              apart. About fifteen people met with Chantal to talk about their
+              perception of sound. By means of a personal narrative, each person
+              described how sound can act as a refuge in certain circumstances.
+            </p>
+
+            <p>
+              Recordings were made with the participation of:
+              <br />
+              Rémy Bélanger de Beauport, Gabrielle Bouthillier, and Guylaine
+              Coderre in Avatar’s studio, Quebec City, in 2018 and DinahBird,
+              Antoine Chao, Amaury da Cunha, Léa Minod, and Carole Rieussec at
+              Les Récollets, a studio-residency managed by the Conseil des arts
+              et des lettres du Québec and located in the 10th arrondissement of
+              Paris, in 2016.
+            </p>
+
+            <p>
+              Improvisation around and in the piano of Avatar’s studio: Frédéric
+              Lebrasseur and Chantal Dumas, in 2018.
+            </p>
+          </AudioWorkPart>
+
+          <AudioWorkPart
+            title="Imperfect Breath"
+            slug="imperfect-breath-friz"
+            tracks={[]}
+            duration="8 min 40 sec"
+            artist="Friz"
+            year="2019"
+          />
+
+          <AudioWorkPart
+            title="Joker"
+            slug="joker-rieussec"
+            tracks={[]}
+            duration="8 min 42 sec"
+            artist="Rieussec"
+            year="2019"
+          />
+
+          <AudioWorkPart
+            title="expédition"
+            slug="expedition-sexton"
+            tracks={[]}
+            duration="10 min 3 sec"
+            artist="Sexton"
+            year="2019"
+          />
+        </div>
+      </section>
 
       <ArtistsView artists={artists} />
 
@@ -433,7 +510,8 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
 
           grid-gap: 30px;
           grid-template-columns: repeat(1, 1fr);
-          margin: 100px auto;
+          margin-top: 100px;
+          padding-bottom: 100px;
 
           ${mediaQuery.greaterThen(1280)} {
             grid-template-columns: repeat(4, 1fr);

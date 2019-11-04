@@ -1,6 +1,7 @@
 import { css } from "@emotion/core"
 import { typography, color } from "./styles"
 import mediaQuery from "../utils/media-query"
+import { between, normalize } from "polished"
 
 export const bodyStyles = css`
   font-family: ${typography.type.primary};
@@ -13,13 +14,7 @@ export const bodyStyles = css`
   }
 `
 
-export const htmlStyles = css`
-  background: repeating-linear-gradient(
-    ${color.white},
-    ${color.primary} 3979px,
-    ${color.white} 7958px
-  );
-`
+export const htmlStyles = css``
 
 // const fontsBreakpoint = sizes => {
 //   return css`
@@ -32,6 +27,24 @@ export const htmlStyles = css`
 //     })}
 //   `
 // }
+
+export const resetButtonStyle = css`
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+`
+
+export const h1 = css`
+  font-family: ${typography.type.display};
+  font-weight: ${typography.weight.medium};
+  line-height: 1;
+  font-size: ${typography.size.h1[0] / typography.size.bases[0]}em;
+
+  ${mediaQuery.greaterThen(typography.breakpoints[1])} {
+    font-size: ${typography.size.h1[1] / typography.size.bases[1]}em;
+  }
+`
 
 export const h2 = css`
   font-family: ${typography.type.display};
@@ -54,7 +67,22 @@ export const h3 = css`
   }
 `
 
+export const WrapperStyles = css`
+  max-width: 1624px;
+  margin: auto 36px;
+
+  ${mediaQuery.greaterThen(1024)} {
+    margin: auto ${between("36px", "147px", "1024px", "1920px")};
+  }
+
+  ${mediaQuery.greaterThen(1920)} {
+    margin: auto;
+  }
+`
+
 export const globalStyle = css`
+  ${normalize()};
+
   html {
     ${htmlStyles};
   }

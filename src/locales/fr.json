@@ -5,7 +5,10 @@
   "slug.nothingButWater": "rien-que-de-l-eau",
   "slug.archivedWorks": "pieces-archives",
   "labels.audioWorks": "Œuvres sonores",
+  "labels.duration": "Durée",
+  "labels.close": "Fermer",
   "labels.notesOnTheArtists": "Notes sur les artistes",
+  "labels.notesOnThePiece": "Notes sur la pièce",
   "labels.openWindows": "Fenêtres Ouvertes",
   "labels.nothingButWater": "Rien que de l'eau",
   "labels.archivedWorks": "Pièces archives"

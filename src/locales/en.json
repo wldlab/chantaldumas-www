@@ -5,7 +5,10 @@
   "slug.nothingButWater": "nothing-but-water",
   "slug.archivedWorks": "archived-works",
   "labels.audioWorks": "Audio works",
+  "labels.duration": "Duration",
+  "labels.close": "Close",
   "labels.notesOnTheArtists": "Notes on the artists",
+  "labels.notesOnThePiece": "Notes on the piece",
   "labels.openWindows": "Open Windows",
   "labels.nothingButWater": "Nothing but water",
   "labels.archivedWorks": "Archived works"

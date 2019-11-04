@@ -4,33 +4,36 @@ import { Global, css } from "@emotion/core"
 
 import "../../Fonts/typographies.css"
 
-import { globalStyle } from "../../styles/global"
-import mediaQuery from "../../utils/media-query"
-import { between } from "polished"
+import { globalStyle, WrapperStyles } from "../../styles/global"
 import Player from "../Player"
 import { PlayerProvider } from "../../context/PlayerContext"
+import Hero from "../../views/Hero"
+import { color } from "../../styles/styles"
 
 const Layout = ({ children }) => {
   return (
     <>
       <PlayerProvider>
         <Global styles={globalStyle} />
-        <div
+        <Hero />
+
+        <main
           css={css`
-            max-width: 1624px;
-            margin: auto 36px;
-
-            ${mediaQuery.greaterThen(1024)} {
-              margin: auto ${between("36px", "147px", "1024px", "1920px")};
-            }
-
-            ${mediaQuery.greaterThen(1920)} {
-              margin: auto;
-            }
+            background: repeating-linear-gradient(
+              ${color.white},
+              ${color.primary} 3979px,
+              ${color.white} 7958px
+            );
           `}
         >
-          <main>{children}</main>
-        </div>
+          <div
+            css={css`
+              ${WrapperStyles}
+            `}
+          >
+            {children}
+          </div>
+        </main>
 
         <Player />
       </PlayerProvider>
