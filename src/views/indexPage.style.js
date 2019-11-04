@@ -21,10 +21,19 @@ export const OpenWindowName = styled.p`
 
 export const SectionArtistName = styled.p`
   ${h3};
+  margin-top: ${47 / typography.size.h3[0]}em;
+  margin-bottom: ${110 / typography.size.h3[0]}em;
 `
 
 export const SectionTitle = styled.h2`
   ${forcingBreakingWord};
+  margin-top: ${76 / typography.size.h2[0]}em;
+  margin-bottom: ${47 / typography.size.h2[0]}em;
+`
+
+export const OpenWindowBlock = styled.div`
+  margin-top: ${110 / typography.size.bases[0]}em;
+  margin-bottom: ${110 / typography.size.bases[0]}em;
 `
 
 export const NothingButWaterFontBig = styled.div`

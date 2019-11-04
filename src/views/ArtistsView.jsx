@@ -18,9 +18,8 @@ const ArtistCard = ({ name, description }) => (
       {name}
     </h3>
 
-    <MDXRenderer
+    <div
       css={css`
-        /* font-size: ${35 / typography.size.base}em; */
         line-height: ${50 / 35};
 
         font-size: ${typography.size.m[0] / typography.size.bases[0]}em;
@@ -30,8 +29,8 @@ const ArtistCard = ({ name, description }) => (
         }
       `}
     >
-      {description}
-    </MDXRenderer>
+      <MDXRenderer>{description}</MDXRenderer>
+    </div>
   </div>
 )
 
@@ -52,7 +51,7 @@ const ArtistsView = ({ artists }) => {
         css={css`
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(260, 1fr));
-          grid-gap: 30px;
+          grid-gap: 80px 30px;
 
           ${mediaQuery.greaterThen(1024)} {
             grid-template-columns: repeat(auto-fit, minmax(542px, 1fr));

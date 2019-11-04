@@ -14,6 +14,7 @@ const StyledWrapper = styled(Padded)`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(303px, 1fr));
+  margin: ${337 / typography.size.bases[1]}em auto;
 `
 
 const StyledButton = styled.button`
