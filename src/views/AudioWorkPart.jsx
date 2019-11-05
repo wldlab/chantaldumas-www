@@ -100,7 +100,7 @@ const AudioWorkPart = ({
   return (
     <Wrapper>
       <PlayButton onClick={handleClick}>
-        {artist} <span>{!isPlaying ? "►" : `&#10074;&#10074;`}</span>
+        {artist} <span>{!isPlaying ? "►" : <>&#10074;&#10074;</>}</span>
       </PlayButton>
 
       <ContentWrapper>
