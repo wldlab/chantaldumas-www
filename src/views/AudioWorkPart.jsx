@@ -70,15 +70,24 @@ const AudioWorkPart = ({
     font-family: ${typography.type.display};
     font-weight: medium;
     cursor: pointer;
-    color: ${isPlaying && color.primary};
+
     text-align: left;
 
-    transition: color ${transition.speed.fast} ${transition.easing.inQuint};
+    /* transition: color ${transition.speed.fast} ${
+    transition.easing.inQuint
+  }; */
 
     :hover {
-      transition: color ${transition.speed.fast} ${transition.easing.outQuint};
+      /* transition: color ${transition.speed.fast} ${
+    transition.easing.outQuint
+  }; */
       color: ${color.primary};
     }
+
+    ${isPlaying &&
+      css`
+        color: ${color.primary};
+      `}
 
     ${mediaQuery.greaterThen(typography.breakpoints[1])} {
       font-size: ${250 / typography.size.bases[1]}em;
