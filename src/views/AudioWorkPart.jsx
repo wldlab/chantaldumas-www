@@ -58,7 +58,6 @@ const AudioWorkPart = ({
       ${isPlaying &&
         css`
           opacity: 1;
-          pointer-events: auto;
         `};
     }
   `
@@ -88,7 +87,6 @@ const AudioWorkPart = ({
     ${mediaQuery.greaterThen(breakpoint)} {
       :hover + ${ContentWrapper} {
         opacity: 1;
-        pointer-events: auto;
       }
     }
   `
