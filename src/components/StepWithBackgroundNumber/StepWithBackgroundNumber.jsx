@@ -19,7 +19,7 @@ const StepWithBackgroundNumber = ({ children, id, ...rest }) => (
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: -1;
+        z-index: 0;
       `}
     >
       <div
@@ -43,6 +43,7 @@ const StepWithBackgroundNumber = ({ children, id, ...rest }) => (
     <div
       css={css`
         width: 100%;
+        z-index: 1;
       `}
     >
       {children}

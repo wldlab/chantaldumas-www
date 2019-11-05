@@ -88,26 +88,26 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
             year="2018"
           >
             <p>
-              Two series of interviews were conducted in two cities, two years
-              apart. About fifteen people met with Chantal to talk about their
-              perception of sound. By means of a personal narrative, each person
-              described how sound can act as a refuge in certain circumstances.
+              Deux séries d’entretiens se sont déroulées dans deux villes à deux
+              années d’intervalle. Une quinzaine de personnes sont venues
+              rencontrer Chantal pour parler avec elle de leur perception du
+              son. À travers le récit d’une histoire personnelle, chacune et
+              chacun a raconté comment le son peut agir comme un refuge dans
+              certaines circonstances.
             </p>
 
             <p>
-              Recordings were made with the participation of:
-              <br />
-              Rémy Bélanger de Beauport, Gabrielle Bouthillier, and Guylaine
-              Coderre in Avatar’s studio, Quebec City, in 2018 and DinahBird,
-              Antoine Chao, Amaury da Cunha, Léa Minod, and Carole Rieussec at
-              Les Récollets, a studio-residency managed by the Conseil des arts
-              et des lettres du Québec and located in the 10th arrondissement of
-              Paris, in 2016.
+              Enregistrements réalisés avec la participation de: Rémy Bélanger
+              de Beauport, Gabrielle Bouthillier et Guylaine Coderre dans le
+              studio d’Avatar, à Québec, en 2018 et DinahBird, Antoine Chao,
+              Amaury da Cunha, Léa Minod, Carole Rieussec au centre Les
+              Récollets, un atelier-résidence du Conseil des arts et des lettres
+              du Québec, dans le Xe arrondissement de Paris, en 2016.
             </p>
 
             <p>
-              Improvisation around and in the piano of Avatar’s studio: Frédéric
-              Lebrasseur and Chantal Dumas, in 2018.
+              Improvisation autour et dans le piano du studio d’Avatar :
+              Frédéric Lebrasseur et Chantal Dumas, en 2018.
             </p>
           </AudioWorkPart>
 
@@ -153,16 +153,17 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
         <OpenWindowBlock>
           <OpenWindowWrapper>
             <p>
-              Published in two volumes, one in print and the other online, the
-              publication Dialogues with Chantal Dumas invites readers and
-              listeners to discover the work of Chantal Dumas. As a sound artist
-              who has been associated with Avatar since 1994, she was part of
-              Ding Dong deluxe, the very first CD put out by the OHM Éditions
-              label, which subsequently also released Les Chantal Dumas and Le
-              parfum des femmes. The various dialogues in this publication offer
-              a close and in-depth look at the composer’s practice, the
-              particular characteristics of radio art, and its position in the
-              broader field of sound art.
+              Présentée en deux volumes, l’un imprimé et l’autre numérique, la
+              publication Dialogues avec Chantal Dumas est une invitation à
+              découvrir le travail de cette artiste sonore associée à Avatar
+              depuis 1994 avec sa participation à Ding Dong deluxe, le tout
+              premier CD du catalogue de OHM éditions, puis avec la parution de
+              l’album Les Chantal Dumas et du triptyque Le parfum des femmes. Au
+              fil des multiples dialogues grâce auxquels nous avons élaboré cet
+              ouvrage et porté un regard attentif sur la pratique de la
+              compositrice, une réflexion autour des spécificités de la création
+              radiophonique et sur son inscription dans le large champ de l’art
+              sonore s’est peu à peu approfondie.
             </p>
           </OpenWindowWrapper>
         </OpenWindowBlock>
@@ -173,22 +174,23 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
               <p>Transmission et contexte d’écoute</p>
 
               <p>
-                <i>Transmission</i> and <i>listening context</i> are the words
-                that really made an impression on me in my initial
-                conver­sations with Dumas. On the one hand, I was interested in
-                sound and its potential as an artistic language; on the other
-                hand, I discovered the key role that radio as a creative space
-                had in the history of sound art as well as in the artist’s
-                development. During one of our conversations, Dumas remembered
-                an alcove in an apartment she stayed in while in Marseilles,
-                which became a special space for her. She described the alcove
-                as a specific place, a listening context in which, thanks to the
-                transmission of sound waves, she could imagine the co-existence
-                of places, strangers and the lives they led, simultaneous
-                tempo­ralities, and images shaped by the sounds circulating
-                there. These sounds penetrated the intangible, traced
-                carto­graphies and sketched inter­actions, bore stories or
-                transmitted knowledge.
+                Transmission et contexte d’écoute, voilà des mots qui m’ont
+                marquée lors de mes premiers échanges avec Chantal. D’un côté,
+                j’étais intéressée par le son et par le potentiel dont il est
+                investi comme langage artistique ; de l’autre, je découvrais la
+                place importante qu’a eue la radio en tant qu’espace de création
+                dans l’histoire de l’art sonore ainsi que dans le parcours de
+                l’artiste. Pendant l’une de nos conversations, Chantal m’a
+                raconté son souvenir d’une alcôve située dans un appartement
+                qu’elle a occupé à Marseille, un espace privilégié pour elle.
+                Elle le décrivait comme un lieu spécifique, voire un contexte
+                d’écoute où pouvaient se concevoir et se côtoyer, grâce à la
+                transmission des ondes, des inconnus et leur existence, des
+                ailleurs, des temporalités simultanées et des images façonnées
+                par les sons qui voyagent. Ces sons percent l’intangible,
+                dessinent des cartographies et esquissent les contours de
+                rencontres, portent des fictions ou transmettent la
+                connaissance.
               </p>
             </UnbreakableBlock>
 
@@ -196,23 +198,24 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
               <p>Opening the Windows</p>
 
               <p>
-                I’ve often heard Dumas use the metaphor of “open windows” to
-                describe her work. I imagine the composer’s creative methods as
-                movements that generate other movements and that offer us
-                different perspectives for understanding the world, that
-                encourage us to listen and to recognize that unlikely universes
-                can sometimes make contact. Opening the window means allowing a
-                way through. As Mario Gauthier wrote to Dumas in an email
-                exchange, this is “because you give us just part of what can be
-                perceived.”
+                J’ai souvent entendu Chantal utiliser cette métaphore des
+                « fenêtres ouvertes » pour décrire ses productions. Je me suis
+                donc figuré les procédés de création dont découle le travail de
+                la compositrice comme des mouvements qui en engendrent d’autres
+                et qui nous proposent différents angles pour comprendre le
+                monde, nous invitent à tendre l’oreille et à avouer que certains
+                univers improbables peuvent parfois se toucher. Ouvrir une
+                fenêtre, c’est permettre un passage. « Parce que tu n’en donnes
+                qu’une partie à percevoir… », écrivait Mario Gauthier à Chantal
+                dans un échange de courriels.
               </p>
 
               <p>
-                “Open Window” is also the title of a poem by Victor Hugo, who
-                likewise evokes and stimulates our sense of hearing. By taking
-                one of the many routes that this project opened up, I was
-                pleased to discover this poem, which begins with the words{" "}
-                <i>I hear</i>.
+                Fenêtres ouvertes est également le titre d’un poème de Victor
+                Hugo, qui évoque et stimule, lui aussi, ce sens qu’est notre
+                ouïe. J’ai découvert ce texte avec plaisir en empruntant l’un
+                des multiples sentiers qu’a ouverts ce projet, texte dont les
+                premiers mots sont J’entends.
               </p>
             </UnbreakableBlock>
           </Columns>
@@ -225,14 +228,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
             </p>
 
             <p>
-              Then there was the theme of “refuge,” based on which Dumas had
-              already sketched some ideas, conducted interviews. While an
-              artist-in-residence at Avatar in the fall of 2018, she also
-              rediscovered the piano, which was akin to reconnecting with an old
-              friend whom we haven’t seen in a long time. Everything was in
-              place for the creation of a new work: Le son-refuge. We then
-              invited other artists to get involved and become part of the
-              dialogue.
+              Puis, il y a eu ce thème du « refuge », autour duquel Chantal
+              avait déjà brassé quelques idées et fait des entrevues et des
+              enregistrements. À cela s’est ajouté, lors d’une résidence que
+              l’artiste a réalisée dans le studio d’Avatar à l’automne 2018, tel
+              un vieil ami complice que l’on retrouve, le piano. Tout était en
+              place pour la création d’une nouvelle pièce : Le son-refuge.
+              D’autres artistes ont été interpellés. On les a invités à prendre
+              part au dialogue.
             </p>
           </OpenWindowWrapper>
         </OpenWindowBlock>
@@ -241,34 +244,38 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           <Columns>
             <UnbreakableBlock>
               <p>
-                Delighted to collaborate, Anna Friz, Carole Rieussec, and Erin
-                Sexton satisfied our desire that this project would provide a
-                pretext for creation, and we produced three original works, all
-                of which resonate with Dumas’s art. Anna Friz composed a piece
-                based on two past recordings, which she considers fundamental to
-                her development. Erin Sexton used a performative mode to
-                explore, as she often does, the question of signal transmission
-                by placing herself in the position of a transmitter and even
-                more particularly, a receiver. Carole Rieussec created a sound
-                work using a selection of speaking voices that evoke the walking
-                body seeking refuge from exile and imagination seeking an anchor
-                in the present.
+                Se prêtant au jeu de la collaboration, Anna Friz, Carole
+                Rieussec et Erin Sexton ont ensuite acquiescé à notre intention,
+                celle que ce projet soit un prétexte nous permettant de nous
+                livrer à la création sonore en elle-même. Elles ont donc créé
+                trois œuvres originales, qui entrent en résonance avec celle de
+                Chantal. Pour ce faire, Anna Friz a composé un morceau à partir
+                de deux enregistrements antérieurs qu’elle considère comme
+                fondamentaux dans son parcours. Erin Sexton a travaillé, comme
+                elle le fait souvent, autour de la question de la transmission
+                des signaux en se positionnant elle-même comme émettrice et,
+                surtout, comme réceptrice sur un mode performatif. Carole
+                Rieussec a généré une œuvre en ayant recours à la parole
+                recueillie qui évoque le corps en marche comme refuge devant
+                l’exil et de l’imaginaire cherchant un ancrage dans le présent.
               </p>
             </UnbreakableBlock>
 
             <UnbreakableBlock>
               <p>
-                Speech, the sound of the voice, runs throughout Dumas’s work and
-                is an aspect that strongly resonates with Céline Huyghebaert,
-                who has made it a thread of a creative piece of writing that
-                echoes the audio works produced for this publication.
+                Cette parole, le son de la voix, qu’on retrouve dans l’ensemble
+                du parcours de Chantal Dumas, résonne par ailleurs fortement
+                avec l’univers de Céline Huyghebaert, si bien que cette dernière
+                en a fait l’un des fils conducteurs d’un texte de création qu’on
+                pourra lire ici, d’un écrit qui fait écho aux pièces créées pour
+                cette publication.
               </p>
 
               <p>
-                In addition, this volume includes a selection of seventeen works
-                by Dumas, created between 1993 and 2017 and accompanied by
-                notes, which offer various tracks of reading and listening, or
-                vice versa.
+                En complément, une sélection de dix-sept œuvres choisies, créées
+                entre 1993 et 2017, le tout étant accompagné de notes, suggère
+                des pistes de lecture, puis d’écoute, ou inversement, dans ce
+                volume.
               </p>
             </UnbreakableBlock>
           </Columns>
@@ -277,65 +284,65 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
         <OpenWindowBlock>
           <OpenWindowWrapper>
             <p>
-              Volume 2: <i>Radio Art and Sound Art</i>
+              Volume 2: <i>Création radiophonique et art sonore</i>
             </p>
 
             <p>
-              Putting Dumas’s work into perspective also means spanning an era
-              during which the mediums and their accessibility changed often.
-              First of all, this is precisely what Avatar sought to explore by
-              inviting the artist to participate in this publication. “The
-              question of what area of sound I was asked to work with—web,
-              radio, theatre, documentary—is interesting at this moment. Yet, in
-              my case, does the area even make a difference?” Today,
-              broadcasting and listening largely pass through the web, and the
-              modes of publication and reception have hanged considerably.
-              Dumas: “I wonder how the transformation of transmission and
-              listening affect writing about radio art. Are we still talking
-              about radio? Would sound production be a more suitable term?”
+              Mettre en perspective les œuvres de Chantal Dumas, c’est aussi
+              traverser une époque où les supports ont souvent changé, de même
+              que leur accessibilité. Dans un premier temps, c’est d’ailleurs ce
+              qu’Avatar se proposait d’explorer en invitant l’artiste à
+              participer à cette publication. « La question est intéressante en
+              ce moment où je suis appelée à travailler le son pour différents
+              domaines : Web, radio, théâtre, documentaire. Dans mon cas, est-ce
+              que cela fait une différence ? » Aujourd’hui, la diffusion et
+              l’écoute passent beaucoup par le Web, et les modalités de
+              publication et de réception ont considérablement changé. « Je me
+              demande quelle est l’incidence de ces transformations de la
+              transmission et de l’écoute sur les écritures radiophoniques.
+              Parle-t-on encore de radio ? Le terme production sonore serait-il
+              plus adéquat ? », s’interrogeait Chantal.
             </p>
           </OpenWindowWrapper>
         </OpenWindowBlock>
 
         <OpenWindowBlock>
           <Columns>
-            <UnbreakableBlock>
-              <p>
-                We asked six Canadian and European experts such questions about
-                various forms of “sound writing.” They rose to the challenge by
-                offering texts that examine Dumas’s work, focusing on certain
-                aspects that stand out, and broadening their analysis to
-                consider creation openly. These texts—several essays—are
-                collected in the publication’s second volume, titled Radio Art
-                and Sound Art. Étienne Noiseau presents an overview of Dumas’s
-                major works. Mario Gauthier reflects on radio by analyzing Le
-                son-refuge. A text by Hélène Prévost evokes the scope of the
-                artist’s production and the context in which her practice has
-                evolved.
-              </p>
-            </UnbreakableBlock>
-
-            <UnbreakableBlock>
-              <p>
-                A testimonial by Frédéric Dallaire addresses the notion of
-                perception while implicitly looking at the question of
-                collaboration. By analyzing the work Tanz, Serge Cardinal
-                considers sound as material, as that which gives form and
-                creates movement and space. Lastly, Golo Föllmer has written a
-                text based on a recent interview conducted with the artist that
-                examines the role of installation, sound, and interactivity in
-                her practice.
-              </p>
-            </UnbreakableBlock>
+            <p>
+              Ces questions sur les différentes écritures sonores, nous les
+              avons posées à une autrice et à cinq auteurs canadiens et
+              européens, tous spécialistes de la discipline. Ils ont relevé le
+              défi d’y répondre par des textes tout en examinant les œuvres de
+              Chantal, en abordant certaines dimensions de son travail qui se
+              démarquent et en élargissant leur analyse pour penser la création
+              en termes ouverts. Ces textes sont rassemblés dans le deuxième
+              volume de cette publication, volume intitulé Création
+              radiophonique et art sonore. Il réunit divers essais. On y trouve,
+              d’abord, une synthèse de certaines créations majeures de Chantal,
+              synthèse qu’a préparée Étienne Noiseau. Puis, on peut y lire un
+              essai de Mario Gauthier, qui a pris pour objet de réflexion la
+              radio en s’appuyant sur une lecture du Son-refuge. Dans les pages
+              suivantes, un texte d’Hélène Prévost évoque l’envergure de la
+              production de l’artiste et le contexte dans lequel a évolué sa
+              pratique. Un témoignage de Frédéric Dallaire aborde la notion de
+              perception en traitant, en filigrane, de la question de la
+              collaboration. Proposée par Serge Cardinal, une analyse de l’œuvre
+              Tanz réfléchit sur le son qui donne corps, qui est matière, qui
+              crée mouvement et espace. Finalement, on se penche sur la place de
+              l’installation, sur le son et sur l’interactivité dans la pratique
+              de l’artiste avec un texte que Golo Föllmer a rédigé à la suite
+              d’un entretien qu’il a eu récemment avec elle.
+            </p>
           </Columns>
         </OpenWindowBlock>
 
         <OpenWindowBlock>
           <OpenWindowWrapper>
             <p>
-              In essence, <i>Dialogues with Chantal Dumas</i> is a complex work
-              in which, for Chantal Dumas, sound is a fully fledged artistic
-              language that has the potential to redefine reality.
+              En somme, Dialogues avec Chantal Dumas est un ouvrage touffu où le
+              son est approché comme un langage ayant le potentiel de redéfinir
+              la réalité, un langage artistique à part entière, pour Chantal
+              Dumas.
             </p>
           </OpenWindowWrapper>
         </OpenWindowBlock>
@@ -343,8 +350,8 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
 
       <section id={t({ id: "slug.nothingButWater" })}>
         <SectionTitle>
-          Nothing <br />
-          but water
+          Rien que <br />
+          de l'eau
         </SectionTitle>
 
         <SectionArtistName>
@@ -362,6 +369,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
       <picture
         css={css`
           display: block;
+          width: 100vw;
           margin: ${200 / typography.size.base}rem calc(50% - 50vw);
         `}
       >
@@ -388,8 +396,8 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           >
             <UnbreakableBlock>
               <p>
-                This text contains references to the following works or
-                documents listed in order of appearance:
+                Ce texte contient des références à des œuvres et à des documents
+                énumérés selon leur ordre d’apparition dans le présent écrit :
               </p>
             </UnbreakableBlock>
 
@@ -404,75 +412,89 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
                 <UnbreakableBlock>
                   <p>
                     Véronique Sanson, <br />
-                    “Rien que de l’eau,” 1992.
+                    <i>Rien que de l’eau</i>, 1992.
                   </p>
 
                   <p>
-                    Dictionary of the Centre National de Ressources Textuelles
-                    et Lexicales.
+                    Dictionnaire du centre national de ressources textuelles et
+                    lexicales
                   </p>
 
-                  <p>Carole Rieussec, JOKER, 2019.</p>
+                  <p>
+                    Carole Rieussec, <i>JOKER</i>, 2019.
+                  </p>
 
                   <p>
                     Mathieu Simonet, <br />
-                    Anne-Sarah K., 2019.
+                    <i>Anne-Sarah K.</i>, 2019.
                   </p>
 
                   <p>
                     Stephen King, <br />
-                    The Langoliers, 1990.
+                    <i>Les Langoliers</i>, 1990.
                   </p>
 
                   <p>
                     Chantal Dumas, <br />
-                    Le son-refuge, 2019.
+                    <i>Le son-refuge</i>, 2019.
                   </p>
 
                   <p>
-                    Wolfgang Amadeus Mozart, Piano Sonata No. 18 in D major,
-                    1789.
+                    Wolfgang Amadeus Mozart,{" "}
+                    <i>Sonate pour piano n° 18 en ré majeur</i>, 1789.
                   </p>
 
                   <p>
                     Georges Perec, <br />
-                    L’Infra-ordinaire, 1989.
+                    <i>L’Infra-ordinaire</i>, 1989.
                   </p>
 
                   <p>
                     Marielle Macé, <br />
-                    Sidérer, considérer – <br />
-                    Migrants en France, 2017.
+                    <i>
+                      Sidérer, considérer. <br />
+                      Migrants en France
+                    </i>
+                    , 2017.
                   </p>
                 </UnbreakableBlock>
 
                 <UnbreakableBlock>
                   <p>
                     Emmanuel Perrin, <br />
-                    “Le ‘Bloop,’ un mystérieux son venu de l’océan qui a
-                    longtemps intrigué les chercheurs,” 2015.
+                    <i>
+                      Le « Bloop », un mystérieux son venu de l’océan qui a
+                      longtemps intrigué les chercheurs
+                    </i>
+                    , 2015.
                   </p>
-                  <p>Erin Sexton, Expedition, 2019.</p>
+                  <p>
+                    Erin Sexton, <i>expédition</i>, 2019.
+                  </p>
                   <p>
                     Philippe Baudouin, <br />
-                    “Les voix fantomatiques de Philippe Baudouin,” 2018.
+                    <i>Les voix fantomatiques de Philippe Baudouin</i>, 2018.
                   </p>
                   <p>Wikipedia.</p>
                   <p>
                     Ryōko Sekiguchi, <br />
-                    La Voix sombre, 2015.
+                    <i>La Voix sombre</i>, 2015.
                   </p>
                   <p>
                     Anna Friz, <br />
-                    Imperfect Breath, 2019.
+                    <i>Imperfect Breath</i>, 2019.
                   </p>
                   <p>
                     Giorgio Agamben, <br />
-                    Nudities, 2010.
+                    <i>Nudités</i>, 2012.
                   </p>
                   <p>
-                    Musée d’art contemporain de Montréal, Leonard Cohen, A Crack
-                    in Everything, 2017–2018.
+                    Musée d’art contemporain de Montréal,{" "}
+                    <i>
+                      Leonard Cohen. <br />
+                      Une brèche en toute chose
+                    </i>
+                    , 2017–2018.
                   </p>
                 </UnbreakableBlock>
               </Columns>
@@ -527,14 +549,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
             grid-column: 1 / span 1;
           `}
         >
-          <p>Dialogues with Chantal&nbsp;Dumas</p>
+          <p>Dialogues avec Chantal&nbsp;Dumas</p>
 
           <p>
             Volume 1: <br />
             Le son-refuge
           </p>
 
-          <p>This publication was produced with the participation of:</p>
+          <p>Cette publication a été réalisée avec le concours de :</p>
         </div>
 
         <ul
@@ -558,14 +580,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           `}
         >
           <li>
-            Publication editor:
+            Direction de publication :
             <ul>
               <li>Caroline Gagné</li>
             </ul>
           </li>
 
           <li>
-            Authors:
+            Auteurs :
             <ul>
               <li>Caroline Gagné</li>
               <li>Céline Huyghebaert</li>
@@ -573,21 +595,21 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </li>
 
           <li>
-            English translation of the original French texts:
+            Traduction anglaise des textes originaux français :
             <ul>
               <li>Oana Avasilichioaei</li>
             </ul>
           </li>
 
           <li>
-            Copy editing of French texts:
+            Révision des textes en français :
             <ul>
               <li>Valérie Litalien</li>
             </ul>
           </li>
 
           <li>
-            Proofreading:
+            Correction d’épreuves :
             <ul>
               <li>Judy Queen</li>
               <li>Valérie Litalien</li>
@@ -595,7 +617,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </li>
 
           <li>
-            Artists:
+            Artistes :
             <ul>
               <li>Chantal Dumas</li>
               <li>Anna Friz</li>
@@ -605,14 +627,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </li>
 
           <li>
-            Digital mastering:
+            Optimisation numérique des pièces :
             <ul>
               <li>Thierry Gauthier</li>
             </ul>
           </li>
 
           <li>
-            Graphic design:
+            Conception graphique :
             <ul>
               <li>
                 <a href="http://criteriumdesign.com/">Criterium</a>
@@ -621,7 +643,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </li>
 
           <li>
-            Web programming and content integration:
+            Programmation et intégration des contenus :
             <ul>
               <li>
                 <a href="http://criteriumdesign.com/">Criterium</a>
@@ -641,7 +663,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           `}
         >
           <p>
-            Publishing and distribution: <br />
+            Édition et distribution : <br />
             Avatar, association de création et de diffusion sonores et
             électroniques
             <br />
@@ -654,7 +676,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </p>
 
           <p>
-            Legal deposit:
+            Dépôt légal :
             <br />
             Bibliothèque et Archives nationales du Québec, 2019
             <br />
@@ -668,13 +690,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           </p>
 
           <p>
-            © Avatar, the artists, <br />
-            the authors, 2019
+            © Avatar, les artistes,
+            <br />
+            les auteurs, 2019
           </p>
 
           <p>
-            All rights reserved – <br />
-            Printed in Canada
+            Tous droits réservés – <br />
+            imprimé au Canada
           </p>
 
           <div
@@ -710,7 +733,7 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
 export default IndexPage
 
 export const query = graphql`
-  query homePageQuery {
+  query accueilPageQuery {
     artists: allFile(filter: { sourceInstanceName: { eq: "artist" } }) {
       edges {
         node {

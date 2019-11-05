@@ -14,6 +14,10 @@ const Columns = ({ columns, children, ...rest }) => (
       ${mediaQuery.greaterThen(768)} {
         columns: ${columns};
       }
+
+      p:first-child {
+        margin-top: 0;
+      }
     `}
     {...rest}
   >
