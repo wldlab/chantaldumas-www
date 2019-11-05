@@ -648,6 +648,9 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
               <li>
                 <a href="http://criteriumdesign.com/">Criterium</a>
               </li>
+              <li>
+                <a href="https://www.marcantoineruel.com/">Marc-Antoine Ruel</a>
+              </li>
             </ul>
           </li>
         </ul>
