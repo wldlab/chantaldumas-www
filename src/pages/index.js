@@ -371,6 +371,10 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           display: block;
           width: 100vw;
           margin: ${200 / typography.size.base}rem calc(50% - 50vw);
+
+          * {
+            width: 100%;
+          }
         `}
       >
         <source

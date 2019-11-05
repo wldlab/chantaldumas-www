@@ -363,6 +363,11 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
         css={css`
           display: block;
           margin: ${200 / typography.size.base}rem calc(50% - 50vw);
+          width: 100vw;
+
+          * {
+            width: 100%;
+          }
         `}
       >
         <source
