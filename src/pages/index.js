@@ -26,6 +26,11 @@ import logoCALQ from "../images/logo-calq.svg"
 import { hideVisually } from "polished"
 import AudioWorkPart from "../views/AudioWorkPart"
 
+import dumas from "../data/audioWorks/Dumas.m4a"
+import friz from "../data/audioWorks/Friz.m4a"
+import rieussec from "../data/audioWorks/Rieussec.m4a"
+import sexton from "../data/audioWorks/Sexton.m4a"
+
 const getMdxFile = (array, lang) => {
   return array.find(({ node }) => {
     return node.childMdx && node.childMdx.frontmatter.locale === lang
@@ -81,8 +86,15 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
         <div>
           <AudioWorkPart
             title="Le son-refuge"
-            slug="Leson-refuge-dumas"
-            tracks={[]}
+            slug="Le-son-refuge-dumas"
+            tracks={[
+              [
+                {
+                  src: dumas,
+                  type: "audio/mp4",
+                },
+              ],
+            ]}
             duration="20 min 48 sec"
             artist="Dumas"
             year="2018"
@@ -114,7 +126,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           <AudioWorkPart
             title="Imperfect Breath"
             slug="imperfect-breath-friz"
-            tracks={[]}
+            tracks={[
+              [
+                {
+                  src: friz,
+                  type: "audio/mp4",
+                },
+              ],
+            ]}
             duration="8 min 40 sec"
             artist="Friz"
             year="2019"
@@ -123,7 +142,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           <AudioWorkPart
             title="Joker"
             slug="joker-rieussec"
-            tracks={[]}
+            tracks={[
+              [
+                {
+                  src: rieussec,
+                  type: "audio/mp4",
+                },
+              ],
+            ]}
             duration="8 min 42 sec"
             artist="Rieussec"
             year="2019"
@@ -132,7 +158,14 @@ const IndexPage = ({ data, pageContext: { langKey }, ...props }) => {
           <AudioWorkPart
             title="expédition"
             slug="expedition-sexton"
-            tracks={[]}
+            tracks={[
+              [
+                {
+                  src: sexton,
+                  type: "audio/mp4",
+                },
+              ],
+            ]}
             duration="10 min 3 sec"
             artist="Sexton"
             year="2019"
