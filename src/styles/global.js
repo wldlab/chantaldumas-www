@@ -1,5 +1,5 @@
 import { css } from "@emotion/core"
-import { typography, color } from "./styles"
+import { typography, color, spacing } from "./styles"
 import mediaQuery from "../utils/media-query"
 import { between, normalize } from "polished"
 
@@ -14,7 +14,9 @@ export const bodyStyles = css`
   }
 `
 
-export const htmlStyles = css``
+export const htmlStyles = css`
+  scroll-behavior: smooth;
+`
 
 // const fontsBreakpoint = sizes => {
 //   return css`
@@ -68,14 +70,20 @@ export const h3 = css`
 `
 
 export const WrapperStyles = css`
-  max-width: 1624px;
-  margin: auto 36px;
+  max-width: ${spacing.width[1]}px;
+  margin: auto ${spacing.margin[0]}px;
 
-  ${mediaQuery.greaterThen(1024)} {
-    margin: auto ${between("36px", "147px", "1024px", "1920px")};
+  ${mediaQuery.greaterThen(spacing.breakpoints[1])} {
+    margin: auto
+      ${between(
+        `${spacing.margin[0]}px`,
+        `${spacing.margin[1]}px`,
+        `${spacing.breakpoints[1]}px`,
+        `${spacing.breakpoints[2]}px`
+      )};
   }
 
-  ${mediaQuery.greaterThen(1920)} {
+  ${mediaQuery.greaterThen(spacing.breakpoints[2])} {
     margin: auto;
   }
 `

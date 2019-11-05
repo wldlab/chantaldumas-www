@@ -9,6 +9,7 @@ import Player from "../Player"
 import { PlayerProvider } from "../../context/PlayerContext"
 import Hero from "../../views/Hero"
 import { color } from "../../styles/styles"
+import Navigation from "../Navigation/Navigation"
 
 const Layout = ({ children }) => {
   return (
@@ -16,6 +17,8 @@ const Layout = ({ children }) => {
       <PlayerProvider>
         <Global styles={globalStyle} />
         <Hero />
+
+        <Navigation />
 
         <main
           css={css`

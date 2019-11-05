@@ -23,7 +23,6 @@ import mediaQuery from "../utils/media-query"
 
 import logoAvatar from "../images/logo-avatar.svg"
 import logoCALQ from "../images/logo-calq.svg"
-import Hero from "../views/Hero"
 import { hideVisually } from "polished"
 import AudioWorkPart from "../views/AudioWorkPart"
 

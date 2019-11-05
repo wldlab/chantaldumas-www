@@ -1,25 +1,60 @@
 // vendors
 import React from "react"
 import { css } from "@emotion/core"
-import { color } from "../styles/styles"
+import { color, spacing } from "../styles/styles"
 import { h1, WrapperStyles } from "../styles/global"
+import { OpenButtonBlock } from "../components/Navigation"
+import zIndices from "../../../boudin-landing-www/www/src/styles/variables/zIndices"
+import mediaQuery from "../utils/media-query"
+
+const breakpoint = 1024
 
 const Hero = () => {
   return (
     <header
       css={css`
         height: 100vh;
-        background-color: ${color.primary};
-        color: ${color.white};
+        position: relative;
+        color: ${color.primary};
+
+        ${mediaQuery.lessThen(breakpoint)} {
+          background-color: ${color.primary};
+          color: ${color.white};
+        }
       `}
     >
       <div
         css={css`
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          clip: rect(0, auto, auto, 0);
+          pointer-events: none;
+          z-index: ${zIndices.fixed - 1};
+
+          ${mediaQuery.greaterThen(breakpoint)} {
+            display: none;
+          }
+        `}
+      >
+        <OpenButtonBlock fill={color.white} />
+      </div>
+
+      <div
+        css={css`
           ${WrapperStyles}
           display: flex;
-          flex-flow: column;
           justify-content: space-between;
           height: 100%;
+          flex-flow: column;
+          box-sizing: border-box;
+
+          ${mediaQuery.greaterThen(breakpoint)} {
+            flex-flow: row-reverse;
+            padding-right: ${spacing.gap[0] + spacing.column[1]}px;
+          }
         `}
       >
         <p

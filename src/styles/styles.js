@@ -8,7 +8,7 @@ export const spacing = {
   margin: [36, 147],
   gap: [10, 30],
   column: [68, 108],
-  breakpoints: [0, 1024],
+  breakpoints: [0, 1024, 1920],
   width: [303, 1624],
 }
 
@@ -52,4 +52,14 @@ export const transition = {
     outBack: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     inOutBack: "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
   },
+}
+
+export const zIndices = {
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modalBackdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070,
 }

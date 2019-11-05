@@ -1,15 +1,17 @@
 {
+  "slug.archivedWorks": "archived-works",
   "slug.audioWorks": "audio-works",
   "slug.notesOnTheArtists": "notes-on-the-artists",
-  "slug.openWindows": "open-windows",
   "slug.nothingButWater": "nothing-but-water",
-  "slug.archivedWorks": "archived-works",
+  "slug.openWindows": "open-windows",
+  "slug.opositeLink": "/",
+  "labels.archivedWorks": "Archived works",
   "labels.audioWorks": "Audio works",
-  "labels.duration": "Duration",
   "labels.close": "Close",
+  "labels.duration": "Duration",
   "labels.notesOnTheArtists": "Notes on the artists",
   "labels.notesOnThePiece": "Notes on the piece",
-  "labels.openWindows": "Open Windows",
   "labels.nothingButWater": "Nothing but water",
-  "labels.archivedWorks": "Archived works"
+  "labels.openWindows": "Open Windows",
+  "labels.opositeLangage": "FR"
 }

@@ -1,15 +1,17 @@
 {
+  "slug.archivedWorks": "pieces-archives",
   "slug.audioWorks": "oeuvres-sonores",
   "slug.notesOnTheArtists": "notes-sur-les-artistes",
-  "slug.openWindows": "fenetres-ouvertes",
   "slug.nothingButWater": "rien-que-de-l-eau",
-  "slug.archivedWorks": "pieces-archives",
+  "slug.openWindows": "fenetres-ouvertes",
+  "slug.opositeLink": "/en/",
   "labels.audioWorks": "Œuvres sonores",
-  "labels.duration": "Durée",
+  "labels.archivedWorks": "Pièces archives",
   "labels.close": "Fermer",
+  "labels.duration": "Durée",
   "labels.notesOnTheArtists": "Notes sur les artistes",
   "labels.notesOnThePiece": "Notes sur la pièce",
-  "labels.openWindows": "Fenêtres Ouvertes",
   "labels.nothingButWater": "Rien que de l'eau",
-  "labels.archivedWorks": "Pièces archives"
+  "labels.openWindows": "Fenêtres Ouvertes",
+  "labels.opositeLangage": "EN"
 }
