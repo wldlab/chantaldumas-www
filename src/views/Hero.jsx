@@ -1,10 +1,9 @@
 // vendors
 import React from "react"
 import { css } from "@emotion/core"
-import { color, spacing } from "../styles/styles"
+import { color, spacing, zIndices } from "../styles/styles"
 import { h1, WrapperStyles } from "../styles/global"
 import { OpenButtonBlock } from "../components/Navigation"
-import zIndices from "../../../boudin-landing-www/www/src/styles/variables/zIndices"
 import mediaQuery from "../utils/media-query"
 
 const breakpoint = 1024

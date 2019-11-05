@@ -2,9 +2,14 @@
 import React, { useState } from "react"
 import { useIntl } from "react-intl"
 import { css } from "@emotion/core"
-import { color, typography, spacing, transition } from "../../styles/styles"
+import {
+  color,
+  typography,
+  spacing,
+  transition,
+  zIndices,
+} from "../../styles/styles"
 import mediaQuery from "../../utils/media-query"
-import zIndices from "../../../../boudin-landing-www/www/src/styles/variables/zIndices"
 import { between } from "polished"
 import logoAvatar from "../../images/logo-avatar-clean.svg"
 import BurgerButton from "../../images/BurgerButton"
