@@ -16,6 +16,8 @@ import BurgerButton from "../../images/BurgerButton"
 import { resetButtonStyle } from "../../styles/global"
 import closingX from "../../images/ClosingX.svg"
 
+import volume2Document from "../../documents/Avatar_Chantal_livre.pdf"
+
 const breakpoint = 1024
 
 export const OpenButtonBlock = ({ fill, onClick, ...rest }) => (
@@ -217,7 +219,7 @@ const Navigation = ({ onOpen, onClose }) => {
             grid-area: 3 / 1 / span 1 / span 2;
           `}
         >
-          <a href="/">Volume 2</a>
+          <a href={volume2Document}>Volume 2</a>
         </p>
 
         <a
