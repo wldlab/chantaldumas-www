@@ -26,10 +26,10 @@ import logoCALQ from "../images/logo-calq.svg"
 import { hideVisually } from "polished"
 import AudioWorkPart from "../views/AudioWorkPart"
 
-import dumas from "../data/audioWorks/Dumas.m4a"
-import friz from "../data/audioWorks/Friz.m4a"
-import rieussec from "../data/audioWorks/Rieussec.m4a"
-import sexton from "../data/audioWorks/Sexton.m4a"
+import dumas from "../data/audioWorks/Dumas.mp3"
+import friz from "../data/audioWorks/Friz.mp3"
+import rieussec from "../data/audioWorks/Rieussec.mp3"
+import sexton from "../data/audioWorks/Sexton.mp3"
 
 const getMdxFile = (array, lang) => {
   return array.find(({ node }) => {
